@@ -1,0 +1,12 @@
+﻿.reveal-animation.ng-enter {
+    -moz-transition: 0.333s ease-in-out opacity;
+    -o-transition: 0.333s ease-in-out opacity;
+    -webkit-transition: 0.333s ease-in-out opacity;
+    transition: 0.333s ease-in-out opacity;
+
+    opacity: 0;
+}
+
+    .reveal-animation.ng-enter.ng-enter-active {
+        opacity: 1;
+    }

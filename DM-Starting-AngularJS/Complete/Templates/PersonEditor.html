@@ -1,0 +1,11 @@
+﻿<form ng-show="currentPerson" name="form" class="col-lg-8 form-horizontal" role="form">
+    <my-label-text-input label="Firstname" field="currentPerson.firstName"></my-label-text-input>
+    <my-label-text-input label="Lastname" field="currentPerson.lastName"></my-label-text-input>
+
+    <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-8">
+            <button ng-click="cancel()" class="btn btn-warning">Cancel</button>
+            <button ng-click="save()" class="btn btn-primary">Save</button>
+        </div>
+    </div>
+</form>

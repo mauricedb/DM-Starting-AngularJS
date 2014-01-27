@@ -1,0 +1,33 @@
+﻿<form ng-show="currentPerson" name="form" class="col-lg-8 form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Firstname</label>
+        <div class="col-lg-8">
+            <input type="text" class="form-control" ng-model="currentPerson.firstName">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Lastname</label>
+        <div class="col-lg-8">
+            <input type="text" class="form-control" ng-model="currentPerson.lastName">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-8">
+            <button ng-click="cancel()" class="btn btn-warning">Cancel</button>
+            <button ng-click="save()" class="btn btn-primary">Save</button>
+        </div>
+    </div>
+</form>
+
+<!--<div>
+    <div>
+        First name: <input type="text" ng-model="currentPerson.firstName" />
+    </div>
+    <div>
+        Last name: <input type="text" ng-model="currentPerson.lastName" />
+    </div>
+</div>
+
+<button ng-click="cancel()">Cancel</button>
+<button ng-click="save()">Save</button>-->

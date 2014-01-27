@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom directives</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/Demos.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/Default.html">AngularJS Demos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Custom directives</h1>
+    </div>
+
+    <div ng-controller="peopleCtrl as ctrl" class="container">
+        <form name="form" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Firstname</label>
+                <div class="col-lg-8">
+                    <input type="text" class="form-control" data-ng-model="person.firstName" data-my-focus />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Lastname</label>
+                <div class="col-lg-8">
+                    <input type="text" class="form-control" ng-model="person.lastName" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-8">
+                    <button ng-click="ctrl.save()" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <!--<div ng-controller="peopleCtrl as ctrl" class="container">
+        <my-person-editor the-person="person" save-action="ctrl.save()"></my-person-editor>
+    </div>-->
+
+    <script src="/Scripts/angular.js"></script>
+    <script src="App/App.js"></script>
+</body>
+</html>

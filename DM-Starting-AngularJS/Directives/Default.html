@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Directives</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/Demos.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/Default.html">AngularJS Demos</a>
+            </div>
+        </div>
+    </div>
+
+    <div ng-controller="peopleCtrl as ctrl" class="container">
+        <h1>Directives</h1>
+
+        <ul class="col-lg-4">
+            <li ng-repeat="p in people">
+                <span ng-click="ctrl.select(p)" class="btn-link">{{p.firstName}} {{p.lastName}}</span>
+            </li>
+        </ul>
+
+        <form ng-show="currentPerson" name="form" class="col-lg-8 form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Firstname</label>
+                <div class="col-lg-8">
+                    <input type="text" class="form-control" ng-model="currentPerson.firstName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">Lastname</label>
+                <div class="col-lg-8">
+                    <input type="text" class="form-control" ng-model="currentPerson.lastName">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-8">
+                    <button ng-click="ctrl.save()" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="/Scripts/angular.js"></script>
+    <script src="App/App.js"></script>
+</body>
+</html>

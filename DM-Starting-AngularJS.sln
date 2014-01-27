@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DM-Starting-AngularJS", "DM-Starting-AngularJS\DM-Starting-AngularJS.csproj", "{8CB1995F-7BD3-480D-8360-B660C13EE69D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{86E537FD-9305-41E3-9046-3460E73AF10D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CB1995F-7BD3-480D-8360-B660C13EE69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB1995F-7BD3-480D-8360-B660C13EE69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB1995F-7BD3-480D-8360-B660C13EE69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB1995F-7BD3-480D-8360-B660C13EE69D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
