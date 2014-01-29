@@ -5,7 +5,7 @@
     <link href="/Content/bootstrap.css" rel="stylesheet" />
     <link href="/Content/Demos.css" rel="stylesheet" />
 </head>
-<body ng-app ng-controller="MyCtrl as ctrl">
+<body ng-app>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -15,8 +15,58 @@
     </div>
 
     <div class="container">
-        
+
+        <div ng-controller="MyCtrl">
+            {{model.message}}
+            <br />
+            <input type="text" ng-model="model.message" />
+            <br />
+            <span ng-bind="model.message"></span>
+            <br />
+            <input type="text" ng-model="person.firstName" />
+            <br />
+            <input type="text" ng-model="person.lastName" />
+            <br />
+            {{person.firstName + " " + person.lastName}}
+ 
+            <ul>
+                <li ng-repeat="person in people" ng-click="clicked(person)">
+                    {{person.firstName + " " + person.lastName}}
+                </li>
+            </ul>
+
+        </div>
+        {{ 1 + 1 }}
 
     </div>
+
+    <script src="/Scripts/angular.js"></script>
+    <script>
+
+        function MyCtrl($scope) {
+            $scope.model = { message: "The controller" };
+
+
+            var person = { firstName: 'Maurice', lastName: 'de Beijer' };
+
+            var people = [
+                person,
+                { firstName: 'Arthur', lastName: 'Dent' },
+                { firstName: 'Ford', lastName: 'Prefect' },
+                { firstName: 'Zaphod', lastName: 'Beeblebrox' },
+                { firstName: 'Marvin', lastName: 'the Paranoid Android' }
+            ];
+
+            $scope.person = person;
+            $scope.people = people;
+
+            $scope.clicked = function(person) {
+                console.log(person);
+            };
+        }
+
+        MyCtrl.$inject = ["$scope"];
+
+    </script>
 </body>
 </html>
